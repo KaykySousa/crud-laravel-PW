@@ -29,3 +29,32 @@ Route::post('/register-product', function(Request $request) {
 
     echo "Created product";
 });
+
+Route::get('/list-product/{id}', function($id) {
+    $product = Product::find($id);
+    return view('list', ['product' => $product]);
+});
+
+Route::get('/edit-product/{id}', function($id){
+    $product = Product::find($id);
+    return view('edit', ['product' => $product]);
+});
+
+Route::post('/edit-product/{id}', function(Request $request, $id) {
+    $product = Product::find($id);
+
+    $product->update([
+        'name' => $request->name,
+        'price' => $request->price,
+        'quantity' => $request->quantity
+    ]);
+
+    echo "Edited product";
+});
+
+Route::get('/delete-product/{id}', function($id){
+    $product = Product::find($id);
+    $product->delete();
+
+    echo "Deleted product";
+});
