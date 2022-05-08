@@ -15,8 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('start');
+Route::get('/', function() {
+    return view('home');
+});
+
+Route::get('/register-product', function () {
+    return view('register');
 });
 
 Route::post('/register-product', function(Request $request) {
@@ -35,6 +39,16 @@ Route::get('/list-product/{id}', function($id) {
     return view('list', ['product' => $product]);
 });
 
+Route::get('/list-products', function() {
+    $products = Product::all();
+    return view('listall', ['products' => $products]);
+});
+
+Route::get('/edit-product', function(){
+    $products = Product::all();
+    return view('editlist', ['products' => $products]);
+});
+
 Route::get('/edit-product/{id}', function($id){
     $product = Product::find($id);
     return view('edit', ['product' => $product]);
@@ -50,6 +64,11 @@ Route::post('/edit-product/{id}', function(Request $request, $id) {
     ]);
 
     echo "Edited product";
+});
+
+Route::get('/delete-product', function(){
+    $products = Product::all();
+    return view('delete', ['products' => $products]);
 });
 
 Route::get('/delete-product/{id}', function($id){

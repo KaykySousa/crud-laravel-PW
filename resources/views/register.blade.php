@@ -11,7 +11,7 @@
     <div class="h-screen w-full flex justify-center items-center bg-gray-900 text-white">
         <form action="/register-product" method="POST" class="shadow-2xl p-7 space-y-4 bg-gray-800 w-full max-w-[640px]">
             @csrf
-            <h1 class="text-center text-2xl font-bold">Cadastro de Produtos</h1>
+            <h1 class="text-center text-3xl font-bold">Cadastro de Produtos</h1>
             <div>
                 <label for="lblName" class="mb-2 block">Nome: </label>
                 <input type="text" name="name" class="input">

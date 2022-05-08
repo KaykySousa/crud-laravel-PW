@@ -8,18 +8,18 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="h-screen w-full flex justify-center items-center bg-gray-900 text-white flex-col">
-        <h1 class="text-center text-2xl font-bold">Listagem de Produtos</h1>
-        <table>
+    <div class="h-screen w-full flex justify-center items-center bg-gray-900 text-white flex-col p-5">
+        <h1 class="text-center text-2xl font-bold mb-5">Listagem de Produtos</h1>
+        <table class="w-full max-w-xl text-center">
             <tr>
-                <th>Nome</th>
-                <th>Valor</th>
-                <th>Quantidade</th>
+                <th class="cell">Nome</th>
+                <th class="cell">Valor</th>
+                <th class="cell">Quantidade</th>
             </tr>
             <tr>
-                <td>{{$product->name}}</td>
-                <td>{{$product->price}}</td>
-                <td>{{$product->quantity}}</td>
+                <td class="cell">{{$product->name}}</td>
+                <td class="cell">{{$product->price}}</td>
+                <td class="cell">{{$product->quantity}}</td>
             </tr>
         </table>
     </div>
