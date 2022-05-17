@@ -8,7 +8,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="h-screen w-full flex justify-center items-center bg-gray-900 text-white">
+    <div class="h-screen w-full flex justify-center items-center bg-gray-900 text-white relative">
+        <a href="/" class="h-8 w-8 absolute left-0 top-0 text-gray-200 m-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg></a>
         <form action="/register-product" method="POST" class="shadow-2xl p-7 space-y-4 bg-gray-800 w-full max-w-[640px]">
             @csrf
             <h1 class="text-center text-3xl font-bold">Cadastro de Produtos</h1>

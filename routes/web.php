@@ -31,7 +31,7 @@ Route::post('/register-product', function(Request $request) {
         'quantity' => $request->quantity
     ]);
 
-    echo "Created product";
+    return redirect('/');
 });
 
 Route::get('/list-product/{id}', function($id) {
@@ -63,7 +63,7 @@ Route::post('/edit-product/{id}', function(Request $request, $id) {
         'quantity' => $request->quantity
     ]);
 
-    echo "Edited product";
+    return redirect('/');
 });
 
 Route::get('/delete-product', function(){
@@ -75,5 +75,5 @@ Route::get('/delete-product/{id}', function($id){
     $product = Product::find($id);
     $product->delete();
 
-    echo "Deleted product";
+    return redirect('/');
 });

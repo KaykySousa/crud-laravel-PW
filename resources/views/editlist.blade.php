@@ -8,7 +8,11 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div class="h-screen w-full bg-gray-900">
+    <div class="h-screen w-full bg-gray-900 relative">
+        <a href="/" class="h-8 w-8 absolute left-0 top-0 text-gray-200 m-3"><svg xmlns="http://www.w3.org/2000/svg" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg></a>
         <div class="text-white flex-col h-full flex justify-center items-center p-5 max-w-[640px] mx-auto space-y-4">
             <h1 class="text-center text-2xl font-bold">Editar Produtos</h1>
     
